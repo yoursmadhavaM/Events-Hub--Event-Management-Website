@@ -100,7 +100,9 @@ CREATE TABLE admin_logs (
     INDEX idx_created_at (created_at)
 ) ENGINE=InnoDB;
 
--- Run database/seed_admin.php after this to create admin (default password: Admin123!)
+-- Default admin (password: Admin123!). Skip if already exists.
+INSERT IGNORE INTO users (name, email, password_hash, role, status) VALUES
+('System Admin', 'admin@eventhub.local', '$2y$10$ozU9ZalX9RHPsbrWEcPvSurtGsqwz7SMFBE732S9vCtxEHndhwZ9i', 'admin', 'active');
 
 -- Optional: seed sample events
 INSERT INTO events (title, category, event_date, location, max_participants, description) VALUES
