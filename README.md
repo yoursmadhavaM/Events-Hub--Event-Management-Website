@@ -7,7 +7,7 @@ Admin maintains the site and adds events; users register for events with multipl
 1. **MySQL**: Create database and run schema.
    - Open phpMyAdmin or MySQL CLI.
    - Run `database/schema.sql` (creates DB `eventhub`, tables, seed events).
-   - Then run: `php database/seed_admin.php` (creates admin: **admin@eventhub.local** / **Admin123!**).
+   - Then run: `php database/seed_admin.php` (creates admin: **admin@eventhub.local** / **Check at page**).
 
 2. **Config**: Edit `config/database.php`.
    - **base_path**: `''` if the app runs at docroot (e.g. `http://localhost/`). Use `/Event%20Website` (or your folder name) if under a subdir (e.g. XAMPP `htdocs/Event Website`).
